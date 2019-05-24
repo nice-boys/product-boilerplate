@@ -1,0 +1,95 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/nice-boys/product-boilerplate",
+  "author": "Max Stoiber <contact@mxstbr.com>",
+  "workspaces": {
+    "packages": [
+      "web",
+      "server"
+    ]
+  },
+  "scripts": {
+    "prettier": "prettier",
+    "prettify": "prettier --write",
+    "lint": "eslint web/src --ext .js,.ts,.tsx",
+    "web": "yarn workspace web",
+    "server": "yarn workspace server",
+    "graphql:codegen": "graphql-codegen --config graphql-codegen.yml"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./web/tsconfig.json"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "react-app"
+    ],
+    "plugins": [
+      "react-hooks",
+      "clean-styled-components"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/no-empty-interface": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "clean-styled-components/single-component-per-file": 2
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,json,md,mdx}": [
+      "yarn run prettify --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "1.2.0",
+    "@graphql-codegen/cli": "^1.2.0",
+    "@graphql-codegen/core": "1.2.0",
+    "@graphql-codegen/fragment-matcher": "1.2.0",
+    "@graphql-codegen/introspection": "1.2.0",
+    "@graphql-codegen/near-operation-file-preset": "1.2.0",
+    "@graphql-codegen/typescript": "1.2.0",
+    "@graphql-codegen/typescript-graphql-files-modules": "1.2.0",
+    "@graphql-codegen/typescript-operations": "1.2.0",
+    "@graphql-codegen/typescript-react-apollo": "1.2.0",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-clean-styled-components": "^0.0.2",
+    "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": ">=1",
+    "lint-staged": ">=8",
+    "prettier": "^1.17.0"
+  },
+  "resolutions": {
+    "styled-jsx": "3.0.0"
+  },
+  "license": "MIT"
+}
