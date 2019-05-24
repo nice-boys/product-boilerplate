@@ -14,6 +14,12 @@ Quickly build new products and apps.
 - [ESLint](https://eslint.org)
 - [yarn](https://yarnpkg.com) workspaces for the monorepo support
 
+## Scripts
+
+- `yarn run web dev`: Start frontend dev server
+- `yarn run prettify`: Prettifies the `src` folder with [Prettier](https://prettier.io).
+- `yarn run lint`: Lints the `src` folder with [ESLint](https://eslint.org).
+
 ## License
 
 Licensed under the MIT License.
