@@ -3,6 +3,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const typescriptFormatter = require("react-dev-utils/typescriptFormatter");
 
 module.exports = withTypescript({
+  serverless: true,
   webpack(config, options) {
     // Do not run type checking twice:
     if (options.isServer)
