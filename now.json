@@ -6,7 +6,7 @@
       "use": "@now/next"
     },
     {
-      "src": "server/routes/*.js",
+      "src": "server/routes/*.ts",
       "use": "@now/node"
     }
   ],
