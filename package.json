@@ -14,6 +14,7 @@
     "prettier": "prettier",
     "prettify": "prettier --write",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web server",
+    "dev": "now dev",
     "web": "yarn workspace web",
     "server": "yarn workspace server",
     "graphql:generate": "graphql-codegen --config graphql-codegen.yml",
@@ -89,6 +90,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": ">=1",
     "lint-staged": ">=8",
+    "now": "^15.3.0",
     "prettier": "^1.17.0",
     "react-dev-utils": "^9.0.1",
     "ts-node": "^8.2.0"
