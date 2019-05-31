@@ -17,9 +17,9 @@
     "dev": "now dev",
     "web": "yarn workspace web",
     "server": "yarn workspace server",
-    "graphql:generate": "graphql-codegen --config graphql-codegen.yml",
-    "postgraphql:generate": "yarn graphql:generate:schema",
-    "graphql:generate:schema": "ts-node --skip-project server/graphql/schema/index.ts"
+    "generate:web": "graphql-codegen --config graphql-codegen.yml",
+    "generate:server": "ts-node --skip-project server/graphql/schema/index.ts",
+    "generate:db": "yarn workspace server generate:db"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -59,7 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn run graphql:generate:schema && git add server/graphql/schema.graphql"
+      "pre-commit": "lint-staged && yarn run generate:server && git add server/graphql/schema.graphql"
     }
   },
   "lint-staged": {

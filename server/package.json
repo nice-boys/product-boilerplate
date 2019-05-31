@@ -20,9 +20,7 @@
   "scripts": {
     "db": "(cd database && docker-compose up)",
     "db:deploy": "(cd database && prisma deploy)",
-    "db:generate": "(cd database && prisma generate)",
-    "postdb:generate": "yarn nexus:generate",
-    "nexus:generate": "(cd database && nexus-prisma-generate --client ./database/generated/client --output ./database/generated/nexus-prisma)"
+    "generate:db": "(cd database && prisma generate && nexus-prisma-generate --client ./database/generated/client --output ./database/generated/nexus-prisma)"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",

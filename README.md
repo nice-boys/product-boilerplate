@@ -39,10 +39,11 @@ The entire app (front- and backend) uses [Zeit Now](https://now.sh) for developm
 
 ### Code Generation
 
-There are two code generators at work in this boilerplate:
+There are three code generators at work in this boilerplate:
 
 - [GraphQL Codegen](https://graphql-code-generator.com) automatically generates React components for the frontend that fetch from the API. They are fully typed too, so you know exactly what the shape of the returned data is.
-- [GraphQL Nexus](https://nexus.js.org) in combination with [Prisma](https://prisma.io) let us plug together a production-ready GraphQL API from just the database datamodel.
+- [Prisma](https://prisma.io) generates a fully type-safe database client from our datamodel.
+- [GraphQL Nexus](https://nexus.js.org) (in combination with Prisma) lets us expose a production-ready GraphQL API from the database client.
 
 ### Routing
 
@@ -55,11 +56,22 @@ To add dynamic routing you'll need to edit the `now.json` file. See the [now doc
 
 ### Commands
 
-- `yarn dev`: Stars the development process (front- and backend) with `now dev`
+The two most important commands to see the app locally are:
+
+- `yarn dev`: Stars the development process for the serverless front- and backend with `now dev`.
+- `yarn server db`: Starts the database locally (note: requires Docker to be up and running and docker-compose to be installed)
+
+Further, you will frequently use these while developing:
+
+- `yarn server db:deploy`: Update your local database with changes you made to the datamodel.
+- `yarn generate:web`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
+- `yarn run generate:server`: Generate the `schema.graphql` file for the backend from the Nexus schema
+- `yarn run generate:db`: Generate the Prisma database client for the server.
+
+These are automatically run in a pre-commit hook, so don't worry about calling them manually unless you have a reason to:
+
 - `yarn run prettify`: Prettifies the `src` folder with [Prettier](https://prettier.io).
 - `yarn run lint`: Lints the `src` folder with [ESLint](https://eslint.org).
-- `yarn graphql:codegen`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
-- `yarn run graphql:codegen:schema`: Generate the `schema.graphql` file for the backend from the Nexus schema
 
 ## License
 
