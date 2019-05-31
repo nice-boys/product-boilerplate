@@ -1,6 +1,16 @@
 # Nice Boys™️ Product Boilerplate
 
-Quickly build new products and apps.
+Quickly ship your apps with the power of code generation.
+
+## Philosophy
+
+Product boilerplate is [@brianlovin](https://github.com/brianlovin) and [@mxstbr](https://github.com/mxstbr)'s personal setup to quickly build new apps. It aims to get all the common stuff out of the way and make shipping a product as quick as possible.
+
+An important part of being fast is that we know the included tools inside and out. Another one is code generation, which this boilerplate leverages heavily.
+
+### Code Generation
+
+The boilerplate uses [GraphQL Codegen](https://graphql-code-generator.com) to automatically generate all API calls for the frontend. It uses [GraphQL Nexus](https://nexus.js.org) together with [Prisma](https://prisma.io) to generate a production-grade GraphQL API with the least amount of code possible.
 
 ## Commands
 
