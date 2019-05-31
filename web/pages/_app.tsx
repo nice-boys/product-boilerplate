@@ -4,7 +4,7 @@ import App, { Container } from "next/app";
 import { ApolloProvider } from "react-apollo-hooks";
 import NProgress from "next-nprogress/component";
 import withNProgress from "next-nprogress";
-import GlobalStyles from "../components/GlobalStyles";
+import { BaseStyles } from "@nice-boys/components";
 import withApollo, { ApolloAppProps } from "../components/WithApollo";
 import theme from "../theme";
 
@@ -16,7 +16,7 @@ class MyApp extends App<ApolloAppProps> {
       <Container>
         <NProgress color={theme.brand.default} />
         <ApolloProvider client={apolloClient}>
-          <GlobalStyles />
+          <BaseStyles />
           <Component {...pageProps} />
         </ApolloProvider>
       </Container>

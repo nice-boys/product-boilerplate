@@ -1,4 +1,5 @@
 import React from "react";
+import { Flex, Box } from "rebass";
 import { useGetViewerQuery } from "../graphql/queries/getViewer.generated";
 import Heading from "../components/Heading";
 
@@ -7,9 +8,18 @@ export default () => {
 
   if (data) {
     return (
-      <Heading css={{ color: "blue" }}>
-        Hello {data.viewer ? data.viewer.name : "anonymous"}
-      </Heading>
+      <Flex alignItems="center" justifyContent="center" mt={4}>
+        {data.viewer && data.viewer.name ? (
+          <Heading>
+            Hello {data.viewer ? data.viewer.name : "anonymous"}.{" "}
+            <a href="/api/auth/logout">Log out</a>
+          </Heading>
+        ) : (
+          <Box>
+            Please <a href="/api/auth/google">log in</a>.
+          </Box>
+        )}
+      </Flex>
     );
   }
 
