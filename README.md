@@ -14,24 +14,9 @@ There is three important traits in all the included tooling that we pay attentio
 
 Note that this is our personal boilerplate. You are more than welcome to use it (that's why it's open source), but we cannot give any support when using it. Make sure you understand the tools in it before using it!
 
-## Commands
-
-- `yarn dev`: Stars the development process (front- and backend) with `now dev`
-- `yarn run prettify`: Prettifies the `src` folder with [Prettier](https://prettier.io).
-- `yarn run lint`: Lints the `src` folder with [ESLint](https://eslint.org).
-- `yarn graphql:codegen`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
-- `yarn run graphql:codegen:schema`: Generate the `schema.graphql` file for the backend from the Nexus schema
-
 ## Stack
 
 The entire app (front- and backend) uses [Zeit Now](https://now.sh) for development and deployment, and is fully serverless.
-
-## Code Generation
-
-There are two code generators at work in this boilerplate:
-
-- [GraphQL Codegen](https://graphql-code-generator.com) automatically generates React hooks for the frontend that fetch from the API. These hooks are fully typed too, so you know exactly what the shape of the returned data is.
-- [GraphQL Nexus](https://nexus.js.org) in combination with [Prisma](https://prisma.io) let us plug together a production-ready GraphQL API from just the database datamodel.
 
 ### Frontend
 
@@ -50,6 +35,15 @@ There are two code generators at work in this boilerplate:
 - [Prisma](https://prisma.io) for type-safe database access
 - [Passport](https://passportjs.org) for authentication
 
+## Working with the boilerplate
+
+### Code Generation
+
+There are two code generators at work in this boilerplate:
+
+- [GraphQL Codegen](https://graphql-code-generator.com) automatically generates React hooks for the frontend that fetch from the API. These hooks are fully typed too, so you know exactly what the shape of the returned data is.
+- [GraphQL Nexus](https://nexus.js.org) in combination with [Prisma](https://prisma.io) let us plug together a production-ready GraphQL API from just the database datamodel.
+
 ### Routing
 
 All routing happens via the folder structure:
@@ -58,6 +52,14 @@ All routing happens via the folder structure:
 - **Backend**: TypeScript files within `server/routes/` are served at their respective path with `/api/` prefixed, e.g. `server/routes/auth/google.ts` is served at `localhost:3000/api/auth/gooogle`
 
 To add dynamic routing you'll need to edit the `now.json` file. See the [now documentation](https://zeit.co/docs/v2/deployments/routes/) on the routes config.
+
+### Commands
+
+- `yarn dev`: Stars the development process (front- and backend) with `now dev`
+- `yarn run prettify`: Prettifies the `src` folder with [Prettier](https://prettier.io).
+- `yarn run lint`: Lints the `src` folder with [ESLint](https://eslint.org).
+- `yarn graphql:codegen`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
+- `yarn run graphql:codegen:schema`: Generate the `schema.graphql` file for the backend from the Nexus schema
 
 ## License
 
