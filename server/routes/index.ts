@@ -12,10 +12,7 @@ const Query = queryType({
 
 const schema = makeSchema({
   types: [Query],
-  outputs: {
-    schema: __dirname + "/generated/schema.graphql",
-    typegen: __dirname + "/generated/typings.ts"
-  }
+  outputs: false
 });
 
 const server = new ApolloServer({
