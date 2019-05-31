@@ -1,4 +1,5 @@
 import { queryType, stringArg, makeSchema } from "nexus";
+const path = require("path");
 
 const Query = queryType({
   definition(t) {
@@ -11,7 +12,10 @@ const Query = queryType({
 
 const schema = makeSchema({
   types: [Query],
-  outputs: false
+  outputs: {
+    schema: path.join(__dirname, "../schema.graphql"),
+    typegen: path.join(__dirname, "../types.generated.ts")
+  }
 });
 
 export default schema;
