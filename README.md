@@ -6,7 +6,7 @@ Quickly ship your apps with the power of code generation.
 
 Product boilerplate is [@brianlovin](https://github.com/brianlovin) and [@mxstbr](https://github.com/mxstbr)'s personal setup to quickly build new apps. It aims to get all the common stuff out of the way and make shipping a product as quick as possible.
 
-There is three important traits in all the included tooling that we pay attention to:
+There are three important traits in all the included tooling that we pay attention to:
 
 1. **Mastery**: We know most of these tools inside and out and have a lot of experience with them.
 2. **Code generation**: The less boilerplate code we need to write, the more we can focus on our app. Code generation allows us to automate the tedious parts.
