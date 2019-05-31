@@ -61,12 +61,13 @@ The two most important commands to see the app locally are:
 - `yarn dev`: Stars the development process for the serverless front- and backend with `now dev`.
 - `yarn server db`: Starts the database locally (note: requires Docker to be up and running and docker-compose to be installed)
 
-Further, you will frequently use these while developing:
+Further, you will frequently use these commands while developing:
 
 - `yarn server db:deploy`: Update your local database with changes you made to the datamodel.
-- `yarn generate:web`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
-- `yarn run generate:server`: Generate the `schema.graphql` file for the backend from the Nexus schema
-- `yarn run generate:db`: Generate the Prisma database client for the server.
+- `yarn run generate`: Runs all the codegenerationcommands in sequence. You can also run them manually if necessary:
+  - `yarn generate:web`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
+  - `yarn run generate:server`: Generate the `schema.graphql` file for the backend from the Nexus schema
+  - `yarn run generate:db`: Generate the Prisma database client for the server.
 
 These are automatically run in a pre-commit hook, so don't worry about calling them manually unless you have a reason to:
 

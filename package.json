@@ -17,6 +17,7 @@
     "dev": "now dev",
     "web": "yarn workspace web",
     "server": "yarn workspace server",
+    "generate": "yarn run generate:web && yarn run generate:server && yarn run generate:db",
     "generate:web": "graphql-codegen --config graphql-codegen.yml",
     "generate:server": "ts-node --skip-project server/graphql/schema/index.ts",
     "generate:db": "yarn workspace server generate:db"
