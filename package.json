@@ -13,7 +13,7 @@
   "scripts": {
     "prettier": "prettier",
     "prettify": "prettier --write",
-    "lint": "eslint web/src --ext .js,.ts,.tsx",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web server",
     "web": "yarn workspace web",
     "server": "yarn workspace server",
     "graphql:generate": "graphql-codegen --config graphql-codegen.yml",
@@ -41,6 +41,7 @@
       "@typescript-eslint/explicit-member-accessibility": 0,
       "@typescript-eslint/no-empty-interface": 0,
       "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-explicit-any": 2,
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "clean-styled-components/single-component-per-file": 2

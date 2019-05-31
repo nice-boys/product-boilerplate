@@ -11,7 +11,7 @@ import theme from "../theme";
 export const createApp = (
   input: { top?: React.ReactNode; bottom?: React.ReactNode } = {}
 ) => {
-  class MyApp extends App<AppComponentProps & { apolloClient: any }> {
+  class MyApp extends App<AppComponentProps /* & { apolloClient: any } */> {
     render() {
       const { Component, pageProps /*, apolloClient */ } = this.props;
 

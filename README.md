@@ -5,6 +5,8 @@ Quickly build new products and apps.
 ## Commands
 
 - `yarn dev`: Stars the development process (front- and backend) with `now dev`
+- `yarn graphql:codegen`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
+- `yarn run graphql:codegen:schema`: Generate the `schema.graphql` file for the backend from the Nexus schema
 
 ## Stack
 
