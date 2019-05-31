@@ -3,10 +3,22 @@ import datamodelInfo from "../../database/generated/nexus-prisma";
 import { prismaObjectType, makePrismaSchema } from "nexus-prisma";
 const path = require("path");
 
+const User = prismaObjectType({
+  name: "User",
+  definition(t) {
+    t.prismaFields(["name", "id", "avatarUrl"]);
+  }
+});
+
 const Query = prismaObjectType({
   name: "Query",
   definition(t) {
-    t.prismaFields(["user", "users"]);
+    t.prismaFields([
+      {
+        name: "user",
+        args: ["where"]
+      }
+    ]);
     t.field("viewer", {
       type: "User",
       nullable: true,
@@ -17,7 +29,7 @@ const Query = prismaObjectType({
 });
 
 const schema = makePrismaSchema({
-  types: [Query],
+  types: [Query, User],
   prisma: {
     datamodelInfo,
     client: prisma
