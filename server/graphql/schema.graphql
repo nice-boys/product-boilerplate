@@ -9,13 +9,22 @@ type Query {
 }
 
 type User {
+  avatarUrl: String
+  email: String
+  googleId: ID!
   id: ID!
   name: String!
 }
 
 enum UserOrderByInput {
+  avatarUrl_ASC
+  avatarUrl_DESC
   createdAt_ASC
   createdAt_DESC
+  email_ASC
+  email_DESC
+  googleId_ASC
+  googleId_DESC
   id_ASC
   id_DESC
   name_ASC
@@ -26,6 +35,48 @@ enum UserOrderByInput {
 
 input UserWhereInput {
   AND: [UserWhereInput!]
+  avatarUrl: String
+  avatarUrl_contains: String
+  avatarUrl_ends_with: String
+  avatarUrl_gt: String
+  avatarUrl_gte: String
+  avatarUrl_in: [String!]
+  avatarUrl_lt: String
+  avatarUrl_lte: String
+  avatarUrl_not: String
+  avatarUrl_not_contains: String
+  avatarUrl_not_ends_with: String
+  avatarUrl_not_in: [String!]
+  avatarUrl_not_starts_with: String
+  avatarUrl_starts_with: String
+  email: String
+  email_contains: String
+  email_ends_with: String
+  email_gt: String
+  email_gte: String
+  email_in: [String!]
+  email_lt: String
+  email_lte: String
+  email_not: String
+  email_not_contains: String
+  email_not_ends_with: String
+  email_not_in: [String!]
+  email_not_starts_with: String
+  email_starts_with: String
+  googleId: ID
+  googleId_contains: ID
+  googleId_ends_with: ID
+  googleId_gt: ID
+  googleId_gte: ID
+  googleId_in: [ID!]
+  googleId_lt: ID
+  googleId_lte: ID
+  googleId_not: ID
+  googleId_not_contains: ID
+  googleId_not_ends_with: ID
+  googleId_not_in: [ID!]
+  googleId_not_starts_with: ID
+  googleId_starts_with: ID
   id: ID
   id_contains: ID
   id_ends_with: ID
@@ -59,5 +110,6 @@ input UserWhereInput {
 }
 
 input UserWhereUniqueInput {
+  googleId: ID
   id: ID
 }

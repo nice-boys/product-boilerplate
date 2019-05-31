@@ -6,7 +6,7 @@
       "use": "@now/next"
     },
     {
-      "src": "server/routes/*.ts",
+      "src": "server/routes/**/*.ts",
       "use": "@now/node",
       "config": { "maxLambdaSize": "10mb" }
     }
