@@ -13,10 +13,14 @@
   "scripts": {
     "prettier": "prettier",
     "prettify": "prettier --write",
-    "lint": "eslint web/src --ext .js,.ts,.tsx",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web server",
+    "dev": "now dev",
     "web": "yarn workspace web",
     "server": "yarn workspace server",
-    "graphql:codegen": "graphql-codegen --config graphql-codegen.yml"
+    "generate": "yarn run generate:web && yarn run generate:server && yarn run generate:db",
+    "generate:web": "graphql-codegen --config graphql-codegen.yml",
+    "generate:server": "ts-node --skip-project server/graphql/schema/index.ts",
+    "generate:db": "yarn workspace server generate:db"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -39,14 +43,24 @@
       "@typescript-eslint/explicit-member-accessibility": 0,
       "@typescript-eslint/no-empty-interface": 0,
       "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-explicit-any": 2,
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "clean-styled-components/single-component-per-file": 2
+      "clean-styled-components/single-component-per-file": 2,
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
     }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn run generate:server && git add server/graphql/schema.graphql"
     }
   },
   "lint-staged": {
@@ -86,10 +100,14 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": ">=1",
     "lint-staged": ">=8",
-    "prettier": "^1.17.0"
+    "now": "^15.3.0",
+    "prettier": "^1.17.0",
+    "react-dev-utils": "^9.0.1",
+    "ts-node": "^8.2.0"
   },
   "resolutions": {
-    "styled-jsx": "3.0.0"
+    "styled-jsx": "3.0.0",
+    "graphql": "14.3.1"
   },
   "license": "MIT"
 }

@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "web/next.config.js",
+      "use": "@now/next"
+    },
+    {
+      "src": "server/routes/**/*.ts",
+      "use": "@now/node",
+      "config": { "maxLambdaSize": "10mb" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api(.*)",
+      "dest": "/server/routes$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/web/$1"
+    }
+  ]
+}
