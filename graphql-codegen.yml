@@ -31,8 +31,8 @@ generates:
     config:
       immutableTypes: false
       withHOC: false
-      withComponent: false
-      withHooks: true
+      withComponent: true
+      withHooks: false 
   web/graphql/types.generated.d.ts:
       plugins:
       - add: |

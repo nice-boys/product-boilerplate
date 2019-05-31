@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import App, { Container } from "next/app";
-import { ApolloProvider } from "react-apollo-hooks";
+import { ApolloProvider } from "react-apollo";
 import NProgress from "next-nprogress/component";
 import withNProgress from "next-nprogress";
 import { BaseStyles } from "@nice-boys/components";

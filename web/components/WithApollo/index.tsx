@@ -9,6 +9,7 @@ import { ApolloClient, NormalizedCacheObject } from "apollo-boost";
 export interface ApolloAppProps extends AppProps, DefaultAppIProps {
   apolloClient: ApolloClient<NormalizedCacheObject>;
   apolloState?: NormalizedCacheObject;
+  cookie?: string;
 }
 
 export default (App: AppComponentType<ApolloAppProps>) => {
@@ -29,7 +30,13 @@ export default (App: AppComponentType<ApolloAppProps>) => {
 
       // Run all GraphQL queries in the component tree
       // and extract the resulting data
-      const apollo = getClient(undefined, req);
+      const cookie = req && req.headers.cookie;
+      const host = req && (req.headers["x-forwarded-host"] || req.headers.host);
+      const apollo = getClient(
+        undefined,
+        cookie,
+        `${process.env.NODE_ENV === "development" ? "http" : "https"}://${host}`
+      );
       if (!process.browser) {
         try {
           // Run all GraphQL queries
@@ -59,13 +66,14 @@ export default (App: AppComponentType<ApolloAppProps>) => {
 
       return {
         ...appProps,
-        apolloState
+        apolloState,
+        cookie
       };
     }
 
     constructor(props: ApolloAppProps) {
       super(props);
-      this.apolloClient = getClient(props.apolloState, undefined);
+      this.apolloClient = getClient(props.apolloState, props.cookie);
     }
 
     render() {
