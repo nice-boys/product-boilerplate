@@ -1,8 +1,6 @@
 overwrite: true
 schema: server/graphql/schema/index.ts
 documents: "web/**/*.graphql"
-config:
-  gqlImport: graphql.macro#gql
 require:
   - ts-node/register
 generates:
@@ -21,7 +19,7 @@ generates:
   web/:
     preset: near-operation-file
     presetConfig:
-      baseTypesPath: "schema-types.generated.ts"
+      baseTypesPath: "graphql/schema-types.generated.ts"
       extension: ".generated.tsx"
     plugins:
       - add: |
@@ -31,8 +29,8 @@ generates:
       - "typescript-operations"
       - "typescript-react-apollo"
     config:
-      hooksImportFrom: "@apollo-react/hooks"
       immutableTypes: false
+      withHOC: false
       withComponent: false
       withHooks: true
   web/graphql/types.generated.d.ts:

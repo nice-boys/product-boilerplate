@@ -45,7 +45,16 @@
       "@typescript-eslint/no-explicit-any": 2,
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "clean-styled-components/single-component-per-file": 2
+      "clean-styled-components/single-component-per-file": 2,
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
     }
   },
   "husky": {
