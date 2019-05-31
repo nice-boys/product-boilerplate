@@ -20,5 +20,8 @@
       "src": "/(.*)",
       "dest": "/web/$1"
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }

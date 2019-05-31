@@ -74,6 +74,10 @@ These are automatically run in a pre-commit hook, so don't worry about calling t
 - `yarn run prettify`: Prettifies the `src` folder with [Prettier](https://prettier.io).
 - `yarn run lint`: Lints the `src` folder with [ESLint](https://eslint.org).
 
+### Deployment
+
+To deploy the app, simply run `now`, that's it! We recommend enabling the Now GitHub integration for CD.
+
 ## License
 
 Licensed under the MIT License.
