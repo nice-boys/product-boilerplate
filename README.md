@@ -41,7 +41,7 @@ The entire app (front- and backend) uses [Zeit Now](https://now.sh) for developm
 
 There are two code generators at work in this boilerplate:
 
-- [GraphQL Codegen](https://graphql-code-generator.com) automatically generates React hooks for the frontend that fetch from the API. These hooks are fully typed too, so you know exactly what the shape of the returned data is.
+- [GraphQL Codegen](https://graphql-code-generator.com) automatically generates React components for the frontend that fetch from the API. They are fully typed too, so you know exactly what the shape of the returned data is.
 - [GraphQL Nexus](https://nexus.js.org) in combination with [Prisma](https://prisma.io) let us plug together a production-ready GraphQL API from just the database datamodel.
 
 ### Routing
