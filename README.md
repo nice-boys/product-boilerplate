@@ -18,18 +18,25 @@ Note that this is our personal boilerplate. You are more than welcome to use it 
 
 The entire app (front- and backend) uses [Zeit Now](https://now.sh) for development and deployment, and is fully serverless.
 
+The general tooling includes:
+
+- [TypeScript](typescriptlang.org)
+- [Prettier](https://prettier.io)
+- [ESLint](https://eslint.org)
+- [yarn](https://yarnpkg.com) workspaces for the monorepo support
+- [GraphQL Codegen](https://graphql-code-generator.com)
+
 ### Frontend
 
 - [React](https://github.com/facebook/react)
 - [Next.js](https://github.com/zeit/next.js)
 - [styled-components](https://github.com/styled-components/styled-components)
-- [TypeScript](typescriptlang.org)
-- [Prettier](https://prettier.io)
-- [ESLint](https://eslint.org)
-- [yarn](https://yarnpkg.com) workspaces for the monorepo support
+- [rebass](https://rebassjs.org)
+- [@nice-boys/components](https://github.com/nice-boys/components)
 
 ### Backend
 
+- [GraphQL](https://graphql.org)
 - [Apollo Server](http://apollographql.com/docs/apollo-server) for exposing said GraphQL schema through the API
 - [GraphQL Nexus](https://nexus.js.org) for creating a type-safe GraphQL API
 - [Prisma](https://prisma.io) for type-safe database access
@@ -76,7 +83,9 @@ These are automatically run in a pre-commit hook, so don't worry about calling t
 
 ### Deployment
 
-To deploy the app, simply run `now`, that's it! We recommend enabling the Now GitHub integration for CD.
+To deploy the database, look at the Prisma docs, e.g. their tutorial on [deploying the database to AWS fargate](https://www.prisma.io/tutorials/deploy-prisma-to-aws-fargate-ct14).
+
+Once that is up and running, to deploy the app you simply run `now`, that's it! We recommend enabling the Now GitHub integration for CD.
 
 ## License
 
