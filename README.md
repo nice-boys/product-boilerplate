@@ -18,7 +18,7 @@ Note that this is our personal boilerplate. You are more than welcome to use it 
 
 The entire app (front- and backend) uses [Zeit Now](https://now.sh) for development and deployment, and is fully serverless.
 
-The general tooling includes:
+### Tools
 
 - [TypeScript](typescriptlang.org)
 - [Prettier](https://prettier.io)
