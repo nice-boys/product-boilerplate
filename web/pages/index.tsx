@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Box } from "rebass";
+import { PrimaryButton } from "@nice-boys/components";
 import { GetViewerComponent } from "../graphql/queries/getViewer.generated";
 import Heading from "../components/Heading";
 
@@ -11,10 +12,16 @@ export default () => {
           return (
             <Flex alignItems="center" justifyContent="center" mt={4}>
               {data.viewer && data.viewer.name ? (
-                <Heading>
-                  Hello {data.viewer ? data.viewer.name : "anonymous"}.{" "}
-                  <a href="/api/auth/logout">Log out</a>
-                </Heading>
+                <Flex flexDirection="column" alignItems="center">
+                  <Heading>
+                    👋 Hello, {data.viewer ? data.viewer.name : "anonymous"}!
+                  </Heading>
+                  <Box mt={2}>
+                    <a href="/api/auth/logout">
+                      <PrimaryButton>Log out</PrimaryButton>
+                    </a>
+                  </Box>
+                </Flex>
               ) : (
                 <Box>
                   Please <a href="/api/auth/google">log in</a>.

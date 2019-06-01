@@ -923,10 +923,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nice-boys/components@^0.0.4-canary.3":
-  version "0.0.4-canary.3"
-  resolved "https://registry.yarnpkg.com/@nice-boys/components/-/components-0.0.4-canary.3.tgz#38666fa389e95ef314a0a52e99f34a4c2e12ef2c"
-  integrity sha512-4F8nNHUaWtE/IBCjVg4gBCsebpzUGVBVWhgaUt3pXv6e8ZrZXjEANT5TbB0Nqi9gNbU0An9rn4EJIeyUJLMKsg==
+"@nice-boys/components@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@nice-boys/components/-/components-0.0.4.tgz#8b23092f88a9f1b1053fb2fa03226cae91e47cfd"
+  integrity sha512-dyt0iGINbytRVR10XMv+exgcv4+ELXayJWFuWEa1AfntdZYc+C+bmUWKb+rqjSjk3twi5VCwg+2s+nthuyHd9w==
   dependencies:
     rebass "^3.x.x"
     styled-normalize "^8.x.x"
