@@ -63,18 +63,18 @@ To add dynamic routing you'll need to edit the `now.json` file. See the [now doc
 
 ### Commands
 
-The two most important commands to see the app locally are:
+To start the app locally you have to run these two commands:
 
-- `yarn dev`: Stars the development process for the serverless front- and backend with `now dev`.
-- `yarn server db`: Starts the database locally (note: requires Docker to be up and running and docker-compose to be installed)
+- `yarn run dev`: Stars the development process for the serverless front- and backend with `now dev`.
+- `yarn run db`: Starts the database locally (note: requires Docker to be up and running and docker-compose to be installed)
 
-Further, you will frequently use these commands while developing:
+Further, you will frequently use these commands while developing and they are automatically run whenever you switch branches or pull new code to make sure your generated files are up to date:
 
-- `yarn server db:deploy`: Update your local database with changes you made to the datamodel.
-- `yarn run generate`: Runs all the codegenerationcommands in sequence. You can also run them manually if necessary:
-  - `yarn generate:web`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
-  - `yarn run generate:server`: Generate the `schema.graphql` file for the backend from the Nexus schema
+- `yarn run db:deploy`: Update your local database with changes you made to the datamodel.
+- `yarn run generate`: Runs all the codegeneration commands in sequence. You can also run them manually if necessary:
   - `yarn run generate:db`: Generate the Prisma database client for the server.
+  - `yarn run generate:server`: Generate the `schema.graphql` file for the backend from the Nexus schema
+  - `yarn run generate:web`: Generate the fetching hooks and types for the frontend from the `.graphql` files contained within it
 
 These are automatically run in a pre-commit hook, so don't worry about calling them manually unless you have a reason to:
 
