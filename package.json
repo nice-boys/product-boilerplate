@@ -17,7 +17,9 @@
     "dev": "now dev",
     "web": "yarn workspace web",
     "server": "yarn workspace server",
-    "generate": "yarn run generate:web && yarn run generate:server && yarn run generate:db",
+    "db": "yarn workspace server run db",
+    "db:deploy": "yarn workspace server run db:deploy",
+    "generate": "yarn run generate:db && yarn run generate:server && yarn run generate:web",
     "generate:web": "graphql-codegen --config graphql-codegen.yml",
     "generate:server": "ts-node --skip-project server/graphql/schema/index.ts",
     "generate:db": "yarn workspace server generate:db",
@@ -61,7 +63,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn run generate:server && git add server/graphql/schema.graphql"
+      "pre-commit": "lint-staged && yarn run generate:server && git add server/graphql/schema.graphql",
+      "post-checkout": "yarn run generate && yarn run db:deploy"
     }
   },
   "lint-staged": {
