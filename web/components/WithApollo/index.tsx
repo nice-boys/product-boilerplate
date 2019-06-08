@@ -47,6 +47,7 @@ export default (App: {
             <App
               pageProps={{}}
               {...appProps}
+              // @ts-ignore
               Component={Component}
               router={router}
               apolloClient={apollo}
@@ -80,6 +81,7 @@ export default (App: {
     }
 
     render() {
+      // @ts-ignore
       return <App {...this.props} apolloClient={this.apolloClient} />;
     }
   };
