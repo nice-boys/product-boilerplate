@@ -6,7 +6,7 @@
   "dependencies": {
     "@nice-boys/components": "0.0.4",
     "@types/next": "^8.0.5",
-    "@types/nprogress": "^0.0.29",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
     "@types/rebass": "^3.0.4",
