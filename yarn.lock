@@ -835,12 +835,12 @@
   dependencies:
     "@graphql-codegen/plugin-helpers" "1.2.0"
 
-"@graphql-codegen/introspection@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.2.0.tgz#ee0c77c3d649b27649a62a5992c893793106a96c"
-  integrity sha512-JaXsvTS3HsuK1om0Y4wYbpfLPCWkTZ2+YuQj9ChCnf3WJeGcNgvC1Z40R/wnUos+Va7Z/vx++PjUl5VWd2MDcA==
+"@graphql-codegen/introspection@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.2.1.tgz#ae8476a34eb3025b9f06016a556865981da21302"
+  integrity sha512-R7d7eowlG7jjGsRUHEu/KWHIqBbZ5+fjvvBoP4Dt/zT2YVyISwJA8gGyznBlpg7ZzyTF4k0xXPenBKhO0lw3AQ==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.2.0"
+    "@graphql-codegen/plugin-helpers" "1.2.1"
     tslib "1.9.3"
 
 "@graphql-codegen/near-operation-file-preset@1.2.0":
@@ -857,6 +857,16 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.2.0.tgz#a5011f9d90767cbbe20ad9b4f6c8080bf79ba2fa"
   integrity sha512-eF1p9KlKTgiqqCMnHUTlB8OhV35yyMCVfiqaSFuR0WtnnxgrR9QC6Bw+NAOsoV8gGhK2Uc9VgEJzjjHYVqPiVg==
+  dependencies:
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    import-from "3.0.0"
+    tslib "1.9.3"
+
+"@graphql-codegen/plugin-helpers@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.2.1.tgz#ecda83e38fe44b46a0d415b3dd91d3a1342a56a6"
+  integrity sha512-iymI6pZ9c46vAK8sDSQ+NP/fPMi0/46xtSsXK/QmRkVkRSxU2RtmXsFY2q04WT91C08/wRSTQLta8jkktg8yKg==
   dependencies:
     change-case "3.1.0"
     common-tags "1.8.0"
