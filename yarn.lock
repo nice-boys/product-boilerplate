@@ -863,12 +863,22 @@
     import-from "3.0.0"
     tslib "1.9.3"
 
-"@graphql-codegen/typescript-graphql-files-modules@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-graphql-files-modules/-/typescript-graphql-files-modules-1.2.0.tgz#221d5c91167bb4c3fa709b3cc1040aa5196bdbda"
-  integrity sha512-wtyyV4wFWmg5Cr2z2WCOoUCceGhyvfL+hYDq4tDtzETFxa5xLMUhn9yE+dmFU/xV9wzIz54mPvbgwZk9+jJ5Wg==
+"@graphql-codegen/plugin-helpers@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.2.1.tgz#ecda83e38fe44b46a0d415b3dd91d3a1342a56a6"
+  integrity sha512-iymI6pZ9c46vAK8sDSQ+NP/fPMi0/46xtSsXK/QmRkVkRSxU2RtmXsFY2q04WT91C08/wRSTQLta8jkktg8yKg==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.2.0"
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    import-from "3.0.0"
+    tslib "1.9.3"
+
+"@graphql-codegen/typescript-graphql-files-modules@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-graphql-files-modules/-/typescript-graphql-files-modules-1.2.1.tgz#98b30dc87eae3f9084e5693dad558a14a636b101"
+  integrity sha512-9Ws09cO3DOdQERH6p3tPb82nuwnPuq8ggytz2ZFOes3UsLrtkEuoeeQ2H3YblDD1/t2/4XsywFGPMlfsLNYqxg==
+  dependencies:
+    "@graphql-codegen/plugin-helpers" "1.2.1"
     tslib "1.9.3"
 
 "@graphql-codegen/typescript-operations@1.2.0":
