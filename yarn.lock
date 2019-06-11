@@ -828,12 +828,12 @@
     graphql-toolkit "0.2.12"
     tslib "1.9.3"
 
-"@graphql-codegen/fragment-matcher@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/fragment-matcher/-/fragment-matcher-1.2.0.tgz#da303caac7e579ca84031d72809454b299fa1a5b"
-  integrity sha512-6F1a4TqYhJDOEpOIxAYSu9PtvK6HdyZVqCIFJg/Aw1GNsY8bAMju7bVT9LpxIBc8Ee3Uge3z1jOmWqjqsUa02g==
+"@graphql-codegen/fragment-matcher@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/fragment-matcher/-/fragment-matcher-1.2.1.tgz#3b3b8ebc03c3ebd30ea9ff7200180123db40c15e"
+  integrity sha512-xDLS/iSinrcnVDCJ+VGyHbrIW1+VKWig+f2ALe7jjW61SYBlQ/MTph1KX5/S5LiNz3j+xm889FerJuhUXshNRA==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.2.0"
+    "@graphql-codegen/plugin-helpers" "1.2.1"
 
 "@graphql-codegen/introspection@1.2.0":
   version "1.2.0"
@@ -857,6 +857,16 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.2.0.tgz#a5011f9d90767cbbe20ad9b4f6c8080bf79ba2fa"
   integrity sha512-eF1p9KlKTgiqqCMnHUTlB8OhV35yyMCVfiqaSFuR0WtnnxgrR9QC6Bw+NAOsoV8gGhK2Uc9VgEJzjjHYVqPiVg==
+  dependencies:
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    import-from "3.0.0"
+    tslib "1.9.3"
+
+"@graphql-codegen/plugin-helpers@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.2.1.tgz#ecda83e38fe44b46a0d415b3dd91d3a1342a56a6"
+  integrity sha512-iymI6pZ9c46vAK8sDSQ+NP/fPMi0/46xtSsXK/QmRkVkRSxU2RtmXsFY2q04WT91C08/wRSTQLta8jkktg8yKg==
   dependencies:
     change-case "3.1.0"
     common-tags "1.8.0"
