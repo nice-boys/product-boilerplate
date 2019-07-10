@@ -1305,10 +1305,10 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@types/styled-components@*", "@types/styled-components@^4.1.15":
-  version "4.1.15"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.15.tgz#532b6738ec633b2911e0470522c23e3c658952f2"
-  integrity sha512-DMr4Kq3i5Em2K1ThlqZlC8nrsiO3VaiQS2M+7cOPnseHLtfDUrDjHx6Jv11V6uVIoK8ERYhmfn42RvSIg47rnA==
+"@types/styled-components@*", "@types/styled-components@^4.1.17":
+  version "4.1.17"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.17.tgz#572d96a734c98b92940b6f8ade7299bd2417d9e5"
+  integrity sha512-nH81EgZB2rVgVUplha62qTIxQrQ/Znpn/tZmsE4NzedZ5H93KTHl2u4WUndwM5o1ipEjo8f2LHAkVscriXsrPA==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
