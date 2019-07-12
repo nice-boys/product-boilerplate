@@ -4,7 +4,11 @@ Quickly ship your apps with the power of code generation.
 
 ## Philosophy
 
-Product boilerplate is [@brianlovin](https://github.com/brianlovin) and [@mxstbr](https://github.com/mxstbr)'s personal setup to quickly build new apps. It aims to get all the common stuff out of the way and make shipping a product as quick as possible.
+> "Speed of developer iteration is the single most important factor in how quickly a technology company can move."
+>
+> — Paul Biggar, cofounder CircleCI
+
+Product boilerplate is [@brianlovin](https://github.com/brianlovin) and [@mxstbr](https://github.com/mxstbr)'s personal setup to quickly build new apps. It aims to get all the common stuff out of the way and make shipping and subsequently iterating on a product as quick as possible.
 
 There are three important traits in all the included tooling that we pay attention to:
 
