@@ -1,9 +1,8 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
-import middlewares from "../utils/middlewares";
-import schema from "../graphql/schema";
-import { prisma } from "../database/generated/client";
-import { Context } from "../types";
+import middlewares from "../../utils/middlewares";
+import schema from "../../graphql/schema";
+import { prisma } from "../../database/generated/client";
 
 const app = express();
 
@@ -13,7 +12,7 @@ const server = new ApolloServer({
   schema,
   introspection: true,
   playground: true,
-  context: ({ req }): Context => {
+  context: ({ req }) => {
     return {
       prisma,
       viewerId: req.user ? req.user : undefined
@@ -21,6 +20,12 @@ const server = new ApolloServer({
   }
 });
 
-server.applyMiddleware({ app, path: "/api" });
+server.applyMiddleware({ app, path: "*" });
+
+export const config = {
+  api: {
+    bodyParser: false
+  }
+};
 
 export default app;

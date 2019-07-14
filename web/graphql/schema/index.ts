@@ -3,6 +3,7 @@ import datamodelInfo from "../../database/generated/nexus-prisma";
 import { prismaObjectType, makePrismaSchema } from "nexus-prisma";
 const path = require("path");
 
+// @ts-ignore
 const User = prismaObjectType({
   name: "User",
   definition(t) {
@@ -35,8 +36,10 @@ const schema = makePrismaSchema({
     client: prisma
   },
   outputs: {
-    schema: path.join(__dirname, "../schema.graphql"),
-    typegen: path.join(__dirname, "../types.generated.ts")
+    // schema: path.join(__dirname, "../schema.generated.graphql"),
+    // typegen: path.join(__dirname, "../nexus-schema-types.generated.ts")
+    schema: false,
+    typegen: false
   },
   typegenAutoConfig: {
     sources: [

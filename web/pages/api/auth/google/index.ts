@@ -1,6 +1,6 @@
 import express from "express";
 import passport from "passport";
-import middlewares from "../../../utils/middlewares";
+import middlewares from "../../../../utils/middlewares";
 
 const app = express();
 
