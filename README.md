@@ -16,7 +16,7 @@ Note that this is our personal boilerplate. You are more than welcome to use it 
 
 ## Stack
 
-The entire app (front- and backend) uses [Zeit Now](https://now.sh) for development and deployment, and is fully serverless.
+The entire app (front- and backend) uses [Next.js](https://nextjs.org) in serverless-mode for development, and deployment is powered by [Now](https://now.sh).
 
 ### Tools
 
@@ -54,18 +54,15 @@ There are three code generators at work in this boilerplate:
 
 ### Routing
 
-All routing happens via the folder structure:
+All routing happens via the folder structure in the `web/pages/` folder. Any route under `web/pages/api` will be treated as an [API route](https://nextjs.org/docs#api-routes), all others as React routes.
 
-- **Frontend**: TypeScript files within `web/pages/` are served at their respective path, e.g. `web/pages/about.tsx` is served at `localhost:3000/about`
-- **Backend**: TypeScript files within `server/routes/` are served at their respective path with `/api/` prefixed, e.g. `server/routes/auth/google.ts` is served at `localhost:3000/api/auth/gooogle`
-
-To add dynamic routing you'll need to edit the `now.json` file. See the [now documentation](https://zeit.co/docs/v2/deployments/routes/) on the routes config.
+To add dynamic routing use the Next.js [dynamic routes feature](https://nextjs.org/docs#dynamic-routes).
 
 ### Commands
 
 To start the app locally you have to run these two commands:
 
-- `yarn run dev`: Stars the development process for the serverless front- and backend with `now dev`.
+- `yarn run dev`: Stars the development process for the serverless front- and backend, as well as all generation processes.
 - `yarn run db`: Starts the database locally (note: requires Docker to be up and running and docker-compose to be installed)
 
 Further, you will frequently use these commands while developing and they are automatically run whenever you switch branches or pull new code to make sure your generated files are up to date:
