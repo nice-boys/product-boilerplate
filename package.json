@@ -12,14 +12,14 @@
   "scripts": {
     "prettier": "prettier",
     "prettify": "prettier --write",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web server",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web",
     "dev": "concurrently -n web,generate:web,generate:schema,generate:db \"yarn workspace web dev\" \"yarn generate:web --watch\" \"nodemon -w web/graphql -x 'yarn generate:schema'\" \"nodemon -w web/database/datamodel.prisma -x 'yarn run generate:db'\"",
     "web": "yarn workspace web",
     "db": "yarn workspace web run db",
     "db:deploy": "yarn workspace web run db:deploy",
     "generate": "yarn run generate:db && yarn run generate:schema && yarn run generate:web",
     "generate:web": "graphql-codegen --config graphql-codegen.yml",
-    "generate:schema": "ts-node --skip-project web/graphql/schema/index.ts",
+    "generate:schema": "GENERATE=true ts-node --skip-project web/graphql/schema/index.ts",
     "generate:db": "yarn workspace web generate:db",
     "postinstall": "yarn run generate"
   },
@@ -61,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn run generate:schema && git add web/graphql/schema.graphql",
+      "pre-commit": "lint-staged && yarn run generate:schema && git add web/graphql/schema.generated.graphql",
       "post-checkout": "yarn run generate && yarn run db:deploy"
     }
   },
