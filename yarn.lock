@@ -4474,10 +4474,10 @@ fork-ts-checker-webpack-plugin@1.1.1:
     tapable "^1.0.0"
     worker-rpc "^0.1.0"
 
-fork-ts-checker-webpack-plugin@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-1.3.4.tgz#a75b6fe8d3db0089555f083c4f77372227704244"
-  integrity sha512-2QDXnI2mbbly/OHx/ivtspi2l4K2g+IB0LTQ3AwsBfxyHtMFXtojlsJqGyhUggX08BC+F02CoCG0hRSPOLU2dQ==
+fork-ts-checker-webpack-plugin@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-1.4.2.tgz#3929c6cc6577d0497cecb57238fb0499be87fcb7"
+  integrity sha512-y6A8nwRp3/mq1nEpuMKneTWz3TGBkXytkIfpcBdLFO+tsADQwdhIg1VvnMSi7q86r1UGJcSruRboYLwo1RF5Ew==
   dependencies:
     babel-code-frame "^6.22.0"
     chalk "^2.4.1"
