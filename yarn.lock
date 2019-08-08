@@ -835,13 +835,13 @@
   dependencies:
     "@graphql-codegen/plugin-helpers" "1.2.0"
 
-"@graphql-codegen/introspection@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.2.0.tgz#ee0c77c3d649b27649a62a5992c893793106a96c"
-  integrity sha512-JaXsvTS3HsuK1om0Y4wYbpfLPCWkTZ2+YuQj9ChCnf3WJeGcNgvC1Z40R/wnUos+Va7Z/vx++PjUl5VWd2MDcA==
+"@graphql-codegen/introspection@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.5.0.tgz#193f68f0537b9621de4554c00980f3324e8a0f3d"
+  integrity sha512-DqtZmpwrmTk2jzJ+baPuIV5um2N/XnjHTAJO+heZHuVVb+3UzWzD4qfxI9GKhoCdTuloMatzmio/8FVCxQ2IWQ==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.2.0"
-    tslib "1.9.3"
+    "@graphql-codegen/plugin-helpers" "1.5.0"
+    tslib "1.10.0"
 
 "@graphql-codegen/near-operation-file-preset@1.2.0":
   version "1.2.0"
@@ -862,6 +862,16 @@
     common-tags "1.8.0"
     import-from "3.0.0"
     tslib "1.9.3"
+
+"@graphql-codegen/plugin-helpers@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.5.0.tgz#0235343bee5350877ac7018e30c5833e7ea60b2f"
+  integrity sha512-U869xtwkLiIQBUQA8NlxO561GPBUF1p/Ecb1TW6RjEj72152NEtPMPvii6deWUII/FyL6ZKwahsS4C9CfJZwBQ==
+  dependencies:
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    import-from "3.0.0"
+    tslib "1.10.0"
 
 "@graphql-codegen/typescript-graphql-files-modules@1.2.0":
   version "1.2.0"
@@ -9643,7 +9653,12 @@ ts-node@^8.2.0:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-tslib@1.9.3, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
+tslib@1.10.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+
+tslib@1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
