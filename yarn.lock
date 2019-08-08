@@ -828,12 +828,12 @@
     graphql-toolkit "0.2.12"
     tslib "1.9.3"
 
-"@graphql-codegen/fragment-matcher@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/fragment-matcher/-/fragment-matcher-1.2.0.tgz#da303caac7e579ca84031d72809454b299fa1a5b"
-  integrity sha512-6F1a4TqYhJDOEpOIxAYSu9PtvK6HdyZVqCIFJg/Aw1GNsY8bAMju7bVT9LpxIBc8Ee3Uge3z1jOmWqjqsUa02g==
+"@graphql-codegen/fragment-matcher@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/fragment-matcher/-/fragment-matcher-1.5.0.tgz#407047517db0cee89e3b26138495a50b70017388"
+  integrity sha512-Pc92FzJR0SV6aw8PUqCAzyZRkAQPOsylM+P42Hn7f25jRuhkdn8K14d/6ybPJebZFoVMxoQ0VMkizV4VC2iXkg==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.2.0"
+    "@graphql-codegen/plugin-helpers" "1.5.0"
 
 "@graphql-codegen/introspection@1.2.0":
   version "1.2.0"
@@ -862,6 +862,16 @@
     common-tags "1.8.0"
     import-from "3.0.0"
     tslib "1.9.3"
+
+"@graphql-codegen/plugin-helpers@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.5.0.tgz#0235343bee5350877ac7018e30c5833e7ea60b2f"
+  integrity sha512-U869xtwkLiIQBUQA8NlxO561GPBUF1p/Ecb1TW6RjEj72152NEtPMPvii6deWUII/FyL6ZKwahsS4C9CfJZwBQ==
+  dependencies:
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    import-from "3.0.0"
+    tslib "1.10.0"
 
 "@graphql-codegen/typescript-graphql-files-modules@1.2.0":
   version "1.2.0"
@@ -9642,6 +9652,11 @@ ts-node@^8.2.0:
     make-error "^1.1.1"
     source-map-support "^0.5.6"
     yn "^3.0.0"
+
+tslib@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
 tslib@1.9.3, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.9.3"
