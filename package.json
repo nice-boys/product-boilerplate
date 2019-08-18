@@ -6,23 +6,21 @@
   "author": "Max Stoiber <contact@mxstbr.com>",
   "workspaces": {
     "packages": [
-      "web",
-      "server"
+      "web"
     ]
   },
   "scripts": {
     "prettier": "prettier",
     "prettify": "prettier --write",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web server",
-    "dev": "now dev",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx web",
+    "dev": "concurrently -n web,generate:web,generate:schema,generate:db \"yarn workspace web dev\" \"yarn generate:web --watch\" \"nodemon -w web/graphql -x 'yarn generate:schema'\" \"nodemon -w web/database/datamodel.prisma -x 'yarn run generate:db'\"",
     "web": "yarn workspace web",
-    "server": "yarn workspace server",
-    "db": "yarn workspace server run db",
-    "db:deploy": "yarn workspace server run db:deploy",
-    "generate": "yarn run generate:db && yarn run generate:server && yarn run generate:web",
+    "db": "yarn workspace web run db",
+    "db:deploy": "yarn workspace web run db:deploy",
+    "generate": "yarn run generate:db && yarn run generate:schema && yarn run generate:web",
     "generate:web": "graphql-codegen --config graphql-codegen.yml",
-    "generate:server": "ts-node --skip-project server/graphql/schema/index.ts",
-    "generate:db": "yarn workspace server generate:db",
+    "generate:schema": "GENERATE=true ts-node --skip-project web/graphql/schema/index.ts",
+    "generate:db": "yarn workspace web generate:db",
     "postinstall": "yarn run generate"
   },
   "eslintConfig": {
@@ -63,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn run generate:server && git add server/graphql/schema.graphql",
+      "pre-commit": "lint-staged && yarn run generate:schema && git add web/graphql/schema.generated.graphql",
       "post-checkout": "yarn run generate && yarn run db:deploy"
     }
   },
@@ -92,6 +90,7 @@
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
     "babel-eslint": "^10.0.1",
+    "concurrently": "^4.1.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-react-app": "^3.0.8",
@@ -104,6 +103,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": ">=1",
     "lint-staged": ">=8",
+    "nodemon": "^1.19.1",
     "now": "^15.3.0",
     "prettier": "^1.18.2",
     "react-dev-utils": "^9.0.1",
@@ -111,6 +111,7 @@
   },
   "resolutions": {
     "styled-jsx": "3.0.0",
+    "@types/styled-components": "4.1.8",
     "graphql": "14.3.1"
   },
   "license": "MIT"

@@ -1,5 +1,5 @@
 overwrite: true
-schema: server/graphql/schema/index.ts
+schema: web/graphql/schema/index.ts
 documents: "web/**/*.graphql"
 require:
   - ts-node/register

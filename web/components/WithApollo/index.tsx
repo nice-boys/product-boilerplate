@@ -1,22 +1,25 @@
 import React from "react";
 import { getClient } from "./client";
 import Head from "next/head";
-import { AppComponentType } from "next/app";
-import { NextAppContext, AppProps, DefaultAppIProps } from "next/app";
+import { default as AppComponentType } from "next/app";
+import { AppContext, AppProps, AppInitialProps } from "next/app";
 import { getDataFromTree } from "react-apollo";
 import { ApolloClient, NormalizedCacheObject } from "apollo-boost";
 
-export interface ApolloAppProps extends AppProps, DefaultAppIProps {
+export interface ApolloAppProps extends AppProps, AppInitialProps {
   apolloClient: ApolloClient<NormalizedCacheObject>;
   apolloState?: NormalizedCacheObject;
   cookie?: string;
 }
 
-export default (App: AppComponentType<ApolloAppProps>) => {
+export default (App: {
+  new (): AppComponentType<ApolloAppProps>;
+  getInitialProps: Function;
+}) => {
   return class Apollo extends React.Component<ApolloAppProps> {
     static displayName = "withApollo(App)";
     apolloClient: ApolloClient<NormalizedCacheObject>;
-    static async getInitialProps(ctx: NextAppContext) {
+    static async getInitialProps(ctx: AppContext) {
       const {
         Component,
         router,
@@ -44,6 +47,7 @@ export default (App: AppComponentType<ApolloAppProps>) => {
             <App
               pageProps={{}}
               {...appProps}
+              // @ts-ignore
               Component={Component}
               router={router}
               apolloClient={apollo}
@@ -77,6 +81,7 @@ export default (App: AppComponentType<ApolloAppProps>) => {
     }
 
     render() {
+      // @ts-ignore
       return <App {...this.props} apolloClient={this.apolloClient} />;
     }
   };

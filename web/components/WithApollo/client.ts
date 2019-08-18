@@ -21,7 +21,7 @@ function create(
     connectToDevTools: process.browser,
     ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
     link: new HttpLink({
-      uri: `${host || ""}/api`,
+      uri: `${host || ""}/api/graphql`,
       credentials: "include",
       headers: cookie && {
         Cookie: cookie

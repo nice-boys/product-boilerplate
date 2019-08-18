@@ -1,6 +1,6 @@
 import express from "express";
 import passport from "passport";
-import middlewares from "../../../../utils/middlewares";
+import middlewares from "../../../../../utils/middlewares";
 
 const app = express();
 
@@ -9,7 +9,7 @@ middlewares(app);
 app.get(
   "*",
   passport.authenticate("google", {
-    failureRedirect: "/login"
+    failureRedirect: "/"
   }),
   (req, res) => {
     const redirectUrl = (req.session && req.session.redirectUrl) || "/";

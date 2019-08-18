@@ -1,7 +1,5 @@
 import { Express } from "express";
 import session from "cookie-session";
-import cookieParser from "cookie-parser";
-import bodyParser from "body-parser";
 import passport from "../auth/passport";
 
 const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
@@ -13,9 +11,6 @@ if (!SESSION_SECRET)
   );
 
 export default (app: Express) => {
-  app.use(cookieParser());
-  app.use(bodyParser.json({ limit: "5mb" }));
-  app.use(bodyParser.urlencoded({ extended: false }));
   app.use(
     session({
       name: "session",

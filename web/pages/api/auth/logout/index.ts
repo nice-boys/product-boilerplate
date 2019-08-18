@@ -1,5 +1,5 @@
 import express from "express";
-import middlewares from "../../../utils/middlewares";
+import middlewares from "../../../../utils/middlewares";
 
 const app = express();
 
