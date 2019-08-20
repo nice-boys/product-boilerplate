@@ -1,0 +1,5 @@
+web/.next
+.vscode
+
+*.generated.*
+**/generated/**

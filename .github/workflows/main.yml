@@ -1,0 +1,39 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    name: All the checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Install Node.js 12.x
+        uses: actions/setup-node@master
+        with:
+          version: 12.x
+
+      - name: Install yarn 1.17.3
+        run: npm install -g yarn@1.17.3
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check formatting
+        run: yarn prettier --check '**/*.{js,json,ts,tsx,graphql,md}'
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Check types
+        run: yarn web tsc
+
+      # TODO: Add tests
+      # - name: Run tests
+      #  run: yarn web test:ci
+
+      - name: Build
+        run: yarn web build
