@@ -10,7 +10,7 @@
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
     "@types/rebass": "^3.0.4",
-    "@types/styled-components": "4.1.8",
+    "@types/styled-components": "4.1.18",
     "@zeit/next-typescript": "^1.1.1",
     "apollo-boost": "^0.4.1",
     "apollo-server-micro": "^2.6.9",
@@ -47,7 +47,7 @@
     "nexus-prisma-generate": "^0.3.7"
   },
   "resolutions": {
-    "@types/styled-components": "4.1.8",
+    "@types/styled-components": "4.1.18",
     "styled-jsx": "^3.0.0"
   },
   "scripts": {
