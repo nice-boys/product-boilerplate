@@ -102,7 +102,7 @@
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": ">=1",
-    "lint-staged": ">=8",
+    "lint-staged": ">=9",
     "nodemon": "^1.19.1",
     "now": "^15.3.0",
     "prettier": "^1.18.2",
