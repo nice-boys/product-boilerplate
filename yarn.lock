@@ -1298,10 +1298,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/passport-google-oauth20@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/passport-google-oauth20/-/passport-google-oauth20-2.0.1.tgz#29af01aea28f8435f2bfdf737dbdc5a737442a4c"
-  integrity sha512-b9ORA14v2d6OZoLSKK6rN0VS3I9AWJgBIPHHNE7B2lWH7g7omRtjD+k6TkCbJVLkJRkZRb+5yvBGEWIIf7WVCA==
+"@types/passport-google-oauth20@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/passport-google-oauth20/-/passport-google-oauth20-2.0.2.tgz#d54677e15d66d9be8d2b94de0013b8ff30401187"
+  integrity sha512-5Pek3WNGb/Qb466DJMY26VeuT/WSExJYYOSVlk0hWXZRH4hAjTKxVq2ljXv2TLkTlDEgwi8KOdPpiuT67qjWJQ==
   dependencies:
     "@types/express" "*"
     "@types/passport" "*"
