@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://mxstbr@localhost:5432?schema=public"
+}
+
+generator photonjs {
+  provider = "photonjs"
+}
+
+model User {
+  id String @id @default(cuid())
+  name String
+  googleId String @unique
+  email String?
+  avatarUrl String?
+}
