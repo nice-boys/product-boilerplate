@@ -25,7 +25,7 @@ passport.use(
       const existing = await prisma.user({
         googleId: profile.id
       });
-      if (existing) return done(null, existing);
+      if (existing) return done(undefined, existing);
 
       return prisma
         .createUser({
@@ -46,7 +46,7 @@ passport.use(
               ? profile.photos[0].value
               : undefined
         })
-        .then(user => done(null, user))
+        .then(user => done(undefined, user))
         .catch(err => done(err));
     }
   )
