@@ -852,13 +852,13 @@
   dependencies:
     "@graphql-codegen/plugin-helpers" "1.2.0"
 
-"@graphql-codegen/introspection@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.2.0.tgz#ee0c77c3d649b27649a62a5992c893793106a96c"
-  integrity sha512-JaXsvTS3HsuK1om0Y4wYbpfLPCWkTZ2+YuQj9ChCnf3WJeGcNgvC1Z40R/wnUos+Va7Z/vx++PjUl5VWd2MDcA==
+"@graphql-codegen/introspection@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.6.1.tgz#d0cacb2a66810df180e074fd184bf60347cafef6"
+  integrity sha512-2BZMEXinHwBsR7eMwsxLuYQrPaKqK0tjQiPYkn2o7nIiapji2JO8hZ8tDvLOyYWjVW/b1cPmIhzO1tlV/yLdhA==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.2.0"
-    tslib "1.9.3"
+    "@graphql-codegen/plugin-helpers" "1.6.1"
+    tslib "1.10.0"
 
 "@graphql-codegen/near-operation-file-preset@1.2.0":
   version "1.2.0"
