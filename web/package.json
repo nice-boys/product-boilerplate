@@ -43,7 +43,7 @@
     "@types/express": "^4.16.1",
     "@types/graphql": "^14.2.0",
     "@types/passport": "^1.0.0",
-    "@types/passport-google-oauth20": "^2.0.0",
+    "@types/passport-google-oauth20": "^2.0.2",
     "nexus-prisma-generate": "^0.3.7"
   },
   "resolutions": {
