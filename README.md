@@ -44,7 +44,7 @@ The entire app (front- and backend) uses [Next.js](https://nextjs.org) in server
 - [Apollo Server](http://apollographql.com/docs/apollo-server) for exposing said GraphQL schema through the API
 - [GraphQL Nexus](https://nexus.js.org) for creating a type-safe GraphQL API
 - [Prisma](https://prisma.io) for type-safe database access
-- [Passport](https://passportjs.org) for authentication
+- [Passport](http://www.passportjs.org/) for authentication
 
 ## Working with the boilerplate
 
