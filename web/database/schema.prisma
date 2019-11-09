@@ -5,10 +5,11 @@ datasource db {
 
 generator photonjs {
   provider = "photonjs"
+  output = "./generated/photon"
 }
 
 model User {
-  id String @id @default(cuid())
+  id String @id @unique @default(cuid())
   name String
   googleId String @unique
   email String?

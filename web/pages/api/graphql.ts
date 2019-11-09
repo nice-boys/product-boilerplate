@@ -2,9 +2,10 @@ import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import middlewares from "../../utils/middlewares";
 import schema from "../../graphql/schema";
-import { prisma } from "../../database/generated/client";
+import { Photon } from "../../database/generated/photon";
 
 const app = express();
+const photon = new Photon();
 
 middlewares(app);
 
@@ -14,7 +15,7 @@ const server = new ApolloServer({
   playground: true,
   context: ({ req }) => {
     return {
-      prisma,
+      photon,
       viewerId: req.user ? req.user : undefined
     };
   }
