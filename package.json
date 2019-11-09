@@ -19,7 +19,7 @@
     "db:deploy": "yarn workspace web run db:deploy",
     "generate": "yarn run generate:db && yarn run generate:schema && yarn run generate:web",
     "generate:web": "graphql-codegen --config graphql-codegen.yml",
-    "generate:schema": "GENERATE=true ts-node --skip-project web/graphql/schema/index.ts",
+    "generate:schema": "GENERATE=true ts-node --skip-project --transpile-only web/graphql/schema/index.ts",
     "generate:db": "yarn workspace web generate:db",
     "postinstall": "yarn run generate"
   },
