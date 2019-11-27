@@ -795,6 +795,11 @@
     "@graphql-codegen/plugin-helpers" "1.2.0"
     tslib "1.9.3"
 
+"@graphql-codegen/add@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-1.9.0.tgz#618797757408b3149b2c733ec73899a27b89afb4"
+  integrity sha512-x8ygtwoybvkY8I2sjG4tqB1RsXh1L92W9B8bEzj4o6yxEDihuLg7fS2b10QzzRSisGtgFK8azKzIUg3ceyypJQ==
+
 "@graphql-codegen/cli@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.2.0.tgz#5a67c817559783c0d2e68199ab98f9003188f911"
