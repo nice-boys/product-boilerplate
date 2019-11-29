@@ -24,7 +24,7 @@ The entire app (front- and backend) uses [Next.js](https://nextjs.org) in server
 
 ### Tools
 
-- [TypeScript](typescriptlang.org)
+- [TypeScript](https://typescriptlang.org)
 - [Prettier](https://prettier.io)
 - [ESLint](https://eslint.org)
 - [yarn](https://yarnpkg.com) workspaces for the monorepo support
