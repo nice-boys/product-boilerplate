@@ -795,6 +795,14 @@
     "@graphql-codegen/plugin-helpers" "1.2.0"
     tslib "1.9.3"
 
+"@graphql-codegen/add@1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-1.9.1.tgz#7ac4cfcfdf4c018a406e19a4edf7553b06cdd3c5"
+  integrity sha512-ics82tmc22zRS2b9M6EufmQx9yUVTtDhAKrS8ZjN4tRMyRBdE0c28AUznMYEFP2KVseo2ZdAjnALpy9FQZ9+ZQ==
+  dependencies:
+    "@graphql-codegen/plugin-helpers" "1.9.1"
+    tslib "1.10.0"
+
 "@graphql-codegen/cli@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.2.0.tgz#5a67c817559783c0d2e68199ab98f9003188f911"
@@ -901,6 +909,17 @@
     import-from "3.0.0"
     tslib "1.10.0"
 
+"@graphql-codegen/plugin-helpers@1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.9.1.tgz#2be98ca17d71c7395508a8f3880bd1e5cb3e206b"
+  integrity sha512-Ji8pk7t6Lcjj09R4Qc7yS7LsyQw9A5IUwFa0LFXyLpdNOmukGhnenIkHG/eLqPzWQfVSXvBsqQBYYDsW8YlDlQ==
+  dependencies:
+    "@graphql-toolkit/common" "0.7.4"
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    import-from "3.0.0"
+    tslib "1.10.0"
+
 "@graphql-codegen/typescript-graphql-files-modules@1.6.1":
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-graphql-files-modules/-/typescript-graphql-files-modules-1.6.1.tgz#3db696f3737a3b828ea229e1f67350a15d7a763d"
@@ -947,6 +966,15 @@
     dependency-graph "0.8.0"
     graphql-tag "2.10.1"
     tslib "1.9.3"
+
+"@graphql-toolkit/common@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@graphql-toolkit/common/-/common-0.7.4.tgz#abf995268572c83da6e093e8578a67add73d2d51"
+  integrity sha512-uRNF8JT52CVQ4SWM0lbIL+y44G8WSSZ+MIPNoYq6guT4wbwYDMHWPk/6QXyfBN8N5kZePg/Xa9tTyzWF9SLC1w==
+  dependencies:
+    "@kamilkisiela/graphql-tools" "4.0.6"
+    aggregate-error "3.0.1"
+    lodash "4.17.15"
 
 "@heroku/linewrap@^1.0.0":
   version "1.0.0"
@@ -1773,6 +1801,14 @@ aggregate-error@3.0.0:
   dependencies:
     clean-stack "^2.0.0"
     indent-string "^3.2.0"
+
+aggregate-error@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.0.1.tgz#db2fe7246e536f40d9b5442a39e117d7dd6a24e0"
+  integrity sha512-quoaXsZ9/BLNae5yiNoUz+Nhkwz83GhWwtYFglcjEQB2NDHCIpApbqXxIFnm4Pq/Nvhrsq5sYJFyohrrxnTGAA==
+  dependencies:
+    clean-stack "^2.0.0"
+    indent-string "^4.0.0"
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -5660,7 +5696,7 @@ imurmurhash@^0.1.4:
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
 
-indent-string@4.0.0:
+indent-string@4.0.0, indent-string@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-4.0.0.tgz#624f8f4497d619b2d9768531d58f4122854d7251"
   integrity sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==
