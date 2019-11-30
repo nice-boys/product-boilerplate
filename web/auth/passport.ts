@@ -38,11 +38,11 @@ passport.use(
             "Anonymous",
           googleId: profile.id,
           email:
-            Array.isArray(profile.emails) && profile.emails.length > 1
+            Array.isArray(profile.emails) && profile.emails.length > 0
               ? profile.emails[0].value
               : undefined,
           avatarUrl:
-            Array.isArray(profile.photos) && profile.photos.length > 1
+            Array.isArray(profile.photos) && profile.photos.length > 0
               ? profile.photos[0].value
               : undefined
         })
