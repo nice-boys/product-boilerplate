@@ -18,7 +18,7 @@
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "graphql-tag": "^2.10.1",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.0.1",
+    "next": "^9.3.2",
     "next-nprogress": "^1.4.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.6",
