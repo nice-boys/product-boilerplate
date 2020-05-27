@@ -77,7 +77,7 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/add": "1.2.0",
+    "@graphql-codegen/add": "1.15.0",
     "@graphql-codegen/cli": "^1.2.0",
     "@graphql-codegen/core": "1.6.1",
     "@graphql-codegen/fragment-matcher": "1.6.1",
