@@ -82,7 +82,7 @@
     "@graphql-codegen/core": "1.6.1",
     "@graphql-codegen/fragment-matcher": "1.6.1",
     "@graphql-codegen/introspection": "1.6.1",
-    "@graphql-codegen/near-operation-file-preset": "1.2.0",
+    "@graphql-codegen/near-operation-file-preset": "1.15.0",
     "@graphql-codegen/typescript": "1.2.0",
     "@graphql-codegen/typescript-graphql-files-modules": "1.6.1",
     "@graphql-codegen/typescript-operations": "1.2.0",
