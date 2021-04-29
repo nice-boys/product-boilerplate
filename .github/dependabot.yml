@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: concurrently
+    versions:
+    - 5.3.0
+    - 6.0.0
+    - 6.0.1
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.14.1
+    - 4.14.2
+    - 4.15.0
+    - 4.15.1
+    - 4.15.2
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: "@types/react-dom"
+    versions:
+    - 17.0.0
+    - 17.0.1
+    - 17.0.2
+  - dependency-name: "@graphql-codegen/near-operation-file-preset"
+    versions:
+    - 1.17.13
+  - dependency-name: react-dom
+    versions:
+    - 17.0.1
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
