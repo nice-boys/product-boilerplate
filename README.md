@@ -1,4 +1,10 @@
-# Nice Boys™️ Product Boilerplate
+# REPLACED BY [BEDROCK](https://bedrock.mxstbr.com)
+
+While you can still use this boilerplate, it's very out of date. [Bedrock](https://bedrock.mxstbr.com) is @mxstbr's attempt at building a sustainable business out of a boilerplate in order to allow it to stay up to date.
+
+If you're looking to build a SaaS product, check it out!
+
+----
 
 Quickly ship your apps with the power of code generation.
 
